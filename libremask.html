@@ -1,50 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" type="image/png" href="data:image/png;base64,">
-<title>ICU grade LibreMask</title>
-<style>
-	@media (prefers-color-scheme: dark) {
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="data:image/png;base64,">
+	<title>ICU grade LibreMask</title>
+	<style>
+		@media (prefers-color-scheme: dark) {
+			body {
+				color: #fff;
+				background: #000
+			}
+
+			a:link {
+				color: #9cf
+			}
+
+			a:hover,
+			a:visited:hover {
+				color: #cef
+			}
+
+			a:visited {
+				color: #c9f
+			}
+		}
+
 		body {
-			color: #fff;
-			background: #000
+			margin: 1em auto;
+			max-width: 40em;
+			padding: 0 .62em;
+			font: 1.2em/1.62 sans-serif;
 		}
 
-		a:link {
-			color: #9cf
+		h1,
+		h2,
+		h3 {
+			line-height: 1.2;
 		}
 
-		a:hover,
-		a:visited:hover {
-			color: #cef
+		@media print {
+			body {
+				max-width: none
+			}
 		}
+	</style>
+</head>
 
-		a:visited {
-			color: #c9f
-		}
-	}
 
-	body {
-		margin: 1em auto;
-		max-width: 40em;
-		padding: 0 .62em;
-		font: 1.2em/1.62 sans-serif;
-	}
-
-	h1,
-	h2,
-	h3 {
-		line-height: 1.2;
-	}
-
-	@media print {
-		body {
-			max-width: none
-		}
-	}
-</style>
-<article>
+<body>
 	<header>
 		<h1>ICU-grade LibreMask</h1>
 		<aside>An open source mask with greater than N95 FFP2 filtering efficiency using breathing Filters, HMEs and
@@ -61,146 +66,157 @@
 		<img src="img/Libremask.jpg" alt="Italian Trulli">
 		<figcaption>LibreMask final version with HME filter</figcaption>
 	</figure>
-	<p>It has been developed by a group of spanish citizen researchers, with the help of a number of companies that
-		joint under Coronavirus Makers<sup>[1]</sup> movement. </p>
+	<p>
+		It has been developed by a group of spanish citizen researchers, with the help of a number of companies that
+		joint under Coronavirus Makers<sup>[1]</sup> movement.
+	</p>
 
-	<ul></ul>
-	<li>First prototipe and injection provided by Eyser Hydraulica.<sup>[2]</sup>
-	<li>Second prototipe and injection provided by Coeca<sup>[3]</sup> and Tecnasa<sup>[4]</sup>
-	<li>Third prototype and injection provided by Plastic Oceans<sup>[5]</sup>, Coeca and Tecnasa
-		</ul>
+	<ul>
+		<li>First prototipe and injection provided by Eyser Hydraulica.<sup>[2]</sup>
+		<li>Second prototipe and injection provided by Coeca<sup>[3]</sup> and Tecnasa<sup>[4]</sup>
+		<li>Third prototype and injection provided by Plastic Oceans<sup>[5]</sup>, Coeca and Tecnasa
+	</ul>
 
-		<p>Libremask design consists of a mask made by hot-press or mould
-			injection with silicone or santoprene, removing the haveacs of 3D printed materials,
-			and a standard breathing filter, available in hospitals.
-			These filters offer greater than N95 (FFP2) filtering capability, shielding the
-			most penetrating aerosol size - 300nm - in comparison to surgical masks that offer shielding to micron sized
-			aerosol.
-			These filters even outperform conventional N95 (FFP2) masks with specificity to virus filtration as reported
-			by the manufacturers,
-			and by conventional aerosol filtration tests described below. </p>
-		<p>
-			It is based on the “ Resusable Elastomeric
-			Respirator “proposed by Boston Children’s Hospital and Harvard
-			Medical School.<sup>[6]</sup>
-		</p>
+	<p>Libremask design consists of a mask made by hot-press or mould
+		injection with silicone or santoprene, removing the haveacs of 3D printed materials,
+		and a standard breathing filter, available in hospitals.
+		These filters offer greater than N95 (FFP2) filtering capability, shielding the
+		most penetrating aerosol size - 300nm - in comparison to surgical masks that offer shielding to micron sized
+		aerosol.
+		These filters even outperform conventional N95 (FFP2) masks with specificity to virus filtration as reported
+		by the manufacturers,
+		and by conventional aerosol filtration tests described below.
+	</p>
+	<p>
+		It is based on the “ Resusable Elastomeric
+		Respirator “proposed by Boston Children’s Hospital and Harvard
+		Medical School.<sup>[6]</sup>
+	</p>
 
-		<p> You can copy, modify and reuse all this material in part or totality as
-			long as the resulting product is maintained with
-			the same open hardware license.
-			The mask is not certified, use it at your own responsibility. </p>
-		<h2>Aerosol testing</h2>
-		<p> Following the recommendations from the Spanish National Research Council (CSIC) <sup>[7]</sup>, in the
-			pandemic context,
-			we replicated the experimental setup thanks to the Interuniversity Institute for Earth System Research in
-			Andalusia<sup>[8]</sup>,
-			at the University of Granada<sup>[9]</sup>, to measure filtering capabilities against the most penetrating
-			aerosol size, 300 nm.
-		</p>
-		<p>Generation of NaCl aerosol and size selection with an electrostatic column, at 300 nm-size.
-			Aerosols are counted before and after the filter with two particle counters at the same time, at 1.5 liters
-			per minute.
-		</p>
-		<figure>
-			<img src="img/clean_room_testing.jpg" alt="Italian Trulli">
-			<figcaption>LibreMask filtering efficiency tests in clean room</figcaption>
-		</figure>
-		<p>The mask was tested in a clean room with laser illumination of aerosols and high
-			speed camera recording, to test aerosol leakage, resulting in better performance than FFP3 masks
-			with exhalation valve.</p>
+	<p>
+		You can copy, modify and reuse all this material in part or totality as
+		long as the resulting product is maintained with
+		the same open hardware license.
+		The mask is not certified, use it at your own responsibility.
+	</p>
+	<h2>Aerosol testing</h2>
+	<p>
+		Following the recommendations from the Spanish National Research Council (CSIC) <sup>[7]</sup>, in the
+		pandemic context,
+		we replicated the experimental setup thanks to the Interuniversity Institute for Earth System Research in
+		Andalusia<sup>[8]</sup>,
+		at the University of Granada<sup>[9]</sup>, to measure filtering capabilities against the most penetrating
+		aerosol size, 300 nm.
+	</p>
+	<p>
+		Generation of NaCl aerosol and size selection with an electrostatic column, at 300 nm-size.
+		Aerosols are counted before and after the filter with two particle counters at the same time, at 1.5 liters
+		per minute.
+	</p>
+	<figure>
+		<img src="img/clean_room_testing.jpg" alt="Italian Trulli">
+		<figcaption>LibreMask filtering efficiency tests in clean room</figcaption>
+	</figure>
+	<p>
+		The mask was tested in a clean room with laser illumination of aerosols and high
+		speed camera recording, to test aerosol leakage, resulting in better performance than FFP3 masks
+		with exhalation valve.
+	</p>
 
-		<p>Along with the test of the LibreMask,
-			several other materials were tested to understand their filtering efficiency.
-			Test filtering efficiency was tested with 300nm particles and 1.5l/min flow. </p>
+	<p>
+		Along with the test of the LibreMask,
+		several other materials were tested to understand their filtering efficiency.
+		Test filtering efficiency was tested with 300nm particles and 1.5l/min flow.
+	</p>
 
-		<table style="width:100%">
-			<tr>
-				<th>Component under test</th>
-				<th>Filtering efficiency</th>
-			</tr>
-			<tr>
-				<td>FFP3 mask</td>
-				<td>99.99±0.01% </td>
+	<table style="width:100%">
+		<tr>
+			<th>Component under test</th>
+			<th>Filtering efficiency</th>
+		</tr>
+		<tr>
+			<td>FFP3 mask</td>
+			<td>99.99±0.01% </td>
 
-			</tr>
-			<tr>
-				<td>HME (breathing filter) </td>
-				<td>99.99±0.01%</td>
+		</tr>
+		<tr>
+			<td>HME (breathing filter) </td>
+			<td>99.99±0.01%</td>
 
-			</tr>
-			<tr>
-				<td>HME (breathing filter) used for 5h30m with 30m of intense physical activity</td>
-				<td>99.67±0.01%</td>
+		</tr>
+		<tr>
+			<td>HME (breathing filter) used for 5h30m with 30m of intense physical activity</td>
+			<td>99.67±0.01%</td>
 
-			</tr>
-			<tr>
-				<td>Surgical mask</td>
-				<td>75.9±0.8%</td>
+		</tr>
+		<tr>
+			<td>Surgical mask</td>
+			<td>75.9±0.8%</td>
 
-			</tr>
-			<tr>
-				<td>Nori seaweed</td>
-				<td>69±3%</td>
-			</tr>
+		</tr>
+		<tr>
+			<td>Nori seaweed</td>
+			<td>69±3%</td>
+		</tr>
 
-			<tr>
-				<td>House cleaning wipe</td>
-				<td>31±6%</td>
-			</tr>
+		<tr>
+			<td>House cleaning wipe</td>
+			<td>31±6%</td>
+		</tr>
 
-			<tr>
-				<td>Double layer dust wipe</td>
-				<td>50±10% </td>
-			</tr>
+		<tr>
+			<td>Double layer dust wipe</td>
+			<td>50±10% </td>
+		</tr>
 
-			<tr>
-				<td>Polyester 94 g/cm2 </td>
-				<td>50±10% </td>
-			</tr>
-		</table>
-
-
-		<p>Complete results of this trials are available in "Material filtering efficiency under 300nm particles.
-			Aerosol exposition to SARS-COV-2".<sup>[10]</sup> </p>
-
-		<img src="img/tests.PNG" alt="Test">
+		<tr>
+			<td>Polyester 94 g/cm2 </td>
+			<td>50±10% </td>
+		</tr>
+	</table>
 
 
+	<p>Complete results of this trials are available in "Material filtering efficiency under 300nm particles.
+		Aerosol exposition to SARS-COV-2".<sup>[10]</sup> </p>
 
+	<img src="img/tests.PNG" alt="Test">
 
+	<h2>How to replicate it</h2>
 
-		<h2>How to replicate it</h2>
+	<p>LibreMask is libre open source hardware. You are allowed to copy, modify and study the manufacturing files.
+		Moreover, you are allowed to use the manufacturing files to create your own LibreMask </p>
 
-		<p>LibreMask is libre open source hardware. You are allowed to copy, modify and study the manufacturing files.
-			Moreover, you are allowed to use the manufacturing files to create your own LibreMask </p>
+	<p>While LibreMask has been tested, we cannot warrant that the use of a manufactured LibreMask without
+		controlled means protects you against coronavirus,
+		or other airborne diseases.</p>
+	<p>Hereby,the reponsability of the use of LibreMask is only yours. In case you are buying it, ask your provider
+		for a certificate of conformity that states the filtering efficiency of the mask when equiped with a tested
+		HME
+		filter.
+	</p>
 
-		<p>While LibreMask has been tested, we cannot warrant that the use of a manufactured LibreMask without
-			controlled means protects you against coronavirus,
-			or other airborne diseases.</p>
-		<p>Hereby,the reponsability of the use of LibreMask is only yours. In case you are buying it, ask your provider
-			for a certificate of conformity that states the filtering efficiency of the mask when equiped with a tested
-			HME
-			filter.
-		</p>
-
-		<p>Libremask is composed of:</p>
-	<li> One medical grade silicon mask
-	<li> One Inter-Guard™ HME breathing filter from Intersurgical
-	<li> Two elastic straps
-	</li>
+	<p>Libremask is composed of:</p>
+	<ul>
+		<li> One medical grade silicon mask
+		<li> One Inter-Guard™ HME breathing filter from Intersurgical
+		<li> Two elastic straps
+	</ul>
 
 	<h4>Medical grade mask</h4>
 
 	<p> The following files are available to manufacture the mask : </p>
+	<ul>
+		<li> Step file of V2 mask.<sup>[11]</sup>
+		<li> Soft tooling step for 3D print a mould.<sup>[12]</sup>
+	</ul>
 
-	<li> Step file of V2 mask.<sup>[11]</sup>
-	<li> Soft tooling step for 3D print a mould.<sup>[12]</sup>
-	</li>
-
-	<p> Libremask is mould injected by industrial means, avoiding the use of 3D printing techniques for its
+	<p> 
+		Libremask is mould injected by industrial means, avoiding the use of 3D printing techniques for its
 		manufacturing due to the porous properties of 3D printing objects.</p>
-	<p> Nevertheless, fabricating the mould by 3D printing and injecting silicone also avoids 3D printing problems
-		thanks to the wettability between the liquid silicone and the 3D printed mould.</p>
+	<p>
+		Nevertheless, fabricating the mould by 3D printing and injecting silicone also avoids 3D printing problems
+		thanks to the wettability between the liquid silicone and the 3D printed mould.
+	</p>
 	<figure>
 		<img src="img/3dprintedinjection.JPG" alt="3D injection">
 		<figcaption>3D printed mould and silicon injection</figcaption>
@@ -273,9 +289,11 @@
 		<figcaption>LibreMask filtering efficiency tests in clean room</figcaption>
 	</figure>
 
-	<p>In each stage prior to final version,
+	<p>
+		In each stage prior to final version,
 		the masks were distributed to health staff in hospitals accross Spain to get direct feedback, and to improve
-		with their suggestions the mask, up to the final prototype. </p>
+		with their suggestions the mask, up to the final prototype. 
+	</p>
 
 
 	<figure>
@@ -336,41 +354,36 @@
 	</figure>
 
 
-
 	<h2>Press and contact</h2>
 	<p> Press release can be found here</p>
 
 	<p> For further information contact 
-		<a href="mailto:mafernandez@ugr.es">Miguel Ángel Fernández</a>
+	<a href="mailto:mafernandez@ugr.es">Miguel Ángel Fernández</a>
 		 </p>
 
 	<h2>References</h2>
 
-<ol>
-  <li>Coronavirus Makers Movement webpage<a href="https://coronavirusmakers.org">[Link]</a> </li>
-  <li>Eyser Hidraulica webpage<a href="http://eyserhidraulica.com/">[Link]</a> </li>
-  <li>Coeca webpage <a href="http://coeca.com/">[Link]</a> </li>
-  <li>Tecnasa webpage<a href="http://tecnasa.es/">[Link]</a> </li>
-  <li>Plastic Oceans webpage<a href="https://plasticoceans.org/">[Link]</a> </li>
-  
-  <li>Boston Children’s Hospital. COVID-19: Our response to the N95 shortage<a href="http://www.childrenshospital.org/research/departments-divisions-programs/departments/surgery/surgical-innovation-fellowship">[Link]</a> </li>
-  <li>Minguillón et al. Emisión y exposición a SARS-CoV-2 y opciones de filtración, Instituto de Diagnóstico Ambiental y Estudios del Agua (IDAEA), CSIC, v3, 15.04.2020  <a href="https://www.csic.es/sites/default/files/informe_caracteristicas_sars-cov-2_y_opciones_filtracion_idaea-csic_15_abril.pdf">[Link]</a></li>
-  <li>Andalusian Inter-University Institute for Earth System Research (IISTA-CEAMA) webpage <a href="http://www.iista.es/">[Link]</a></li>
-  <li>University of Granada webpage <a href="http://www.ugr.es/">[Link]</a></li>
-  <li> Instituto Interuniversitario de Investigación del Sistema Tierra en Andalucía, Universidad de
-	Granada. Eficiencia de filtrado de distintos materiales ante partículas de 300
-	nm. Exposición a aerosoles en SARS-COV-2.
-	 <a href="https://atmosphere.ugr.es/media/grupos/RNM119/noticias/Filtros_UGR_sin_FIN_20200426.pdf">[Link]</a></li>
-	 <li>LibreMask final step file <a href="source/ICU-covidmask_V2_19052020.7z">[Link]</a></li>
-	 <li>LibreMask tooling step file  <a href="source/ICU-covidmask_V2_mould_495-00-00_IMP_3D_280520.7z">[Link]</a></li>
-	 <li>Intersurgical. Inter-Guard™ filter information  <a href="https://www.intersurgical.com/products/airway-management/interguard-range-sterile">[Link]</a></li>
-	 
-	 <li>Intersurgical. Inter-Guard™ filter information  <a href="https://www.intersurgical.com/products/airway-management/interguard-range-sterile">[Link]</a></li>
- 
-  <li>Milk</li>
-</ol>  
+	<ol>
+		<li>Coronavirus Makers Movement webpage<a href="https://coronavirusmakers.org">[Link]</a> </li>
+		<li>Eyser Hidraulica webpage<a href="http://eyserhidraulica.com/">[Link]</a> </li>
+		<li>Coeca webpage <a href="http://coeca.com/">[Link]</a> </li>
+		<li>Tecnasa webpage<a href="http://tecnasa.es/">[Link]</a> </li>
+		<li>Plastic Oceans webpage<a href="https://plasticoceans.org/">[Link]</a> </li>
 
+		<li>Boston Children’s Hospital. COVID-19: Our response to the N95 shortage<a href="http://www.childrenshospital.org/research/departments-divisions-programs/departments/surgery/surgical-innovation-fellowship">[Link]</a> </li>
+		<li>Minguillón et al. Emisión y exposición a SARS-CoV-2 y opciones de filtración, Instituto de Diagnóstico Ambiental y Estudios del Agua (IDAEA), CSIC, v3, 15.04.2020  <a href="https://www.csic.es/sites/default/files/informe_caracteristicas_sars-cov-2_y_opciones_filtracion_idaea-csic_15_abril.pdf">[Link]</a></li>
+		<li>Andalusian Inter-University Institute for Earth System Research (IISTA-CEAMA) webpage <a href="http://www.iista.es/">[Link]</a></li>
+		<li>University of Granada webpage <a href="http://www.ugr.es/">[Link]</a></li>
+		<li> Instituto Interuniversitario de Investigación del Sistema Tierra en Andalucía, Universidad de
+		Granada. Eficiencia de filtrado de distintos materiales ante partículas de 300
+		nm. Exposición a aerosoles en SARS-COV-2.
+			<a href="https://atmosphere.ugr.es/media/grupos/RNM119/noticias/Filtros_UGR_sin_FIN_20200426.pdf">[Link]</a></li>
+		<li>LibreMask final step file <a href="source/ICU-covidmask_V2_19052020.7z">[Link]</a></li>
+		<li>LibreMask tooling step file  <a href="source/ICU-covidmask_V2_mould_495-00-00_IMP_3D_280520.7z">[Link]</a></li>
+		<li>Intersurgical. Inter-Guard™ filter information  <a href="https://www.intersurgical.com/products/airway-management/interguard-range-sterile">[Link]</a></li>
+		
+		<li>Intersurgical. Inter-Guard™ filter information  <a href="https://www.intersurgical.com/products/airway-management/interguard-range-sterile">[Link]</a></li>
+
+	</ol>
 </body>
 </html>
-
-</article>
