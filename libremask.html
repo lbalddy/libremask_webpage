@@ -27,7 +27,20 @@
 			}
 		}
 
+		@keyframes highlight {
+			from {background-color: red;}
+			to {background-color: yellow;}
+		}
 
+		li:target {
+			background-color: yellow;
+			animation: highlight 1s ease;  
+		}
+
+		li:target::before {
+			content: "►";
+			color: limegreen;
+		}
 
 		h3 {
 			line-height: 1.2;
@@ -58,13 +71,13 @@
 				</figure>
 				<p>
 					It has been developed by a group of spanish citizen researchers, with the help of a number of companies that
-					joint under Coronavirus Makers<sup>[1]</sup> movement.
+					joint under Coronavirus Makers<sup> <a href="#cite_note_13">[1]</a></sup> movement.
 				</p>
 
 				<ul>
-					<li>First prototipe and injection provided by Eyser Hydraulica.<sup>[2]</sup>
-					<li>Second prototipe and injection provided by Coeca<sup>[3]</sup> and Tecnasa<sup>[4]</sup>
-					<li>Third prototype and injection provided by Plastic Oceans<sup>[5]</sup>, Coeca and Tecnasa
+					<li>First prototipe and injection provided by Eyser Hydraulica.<sup><a href="#cite_note_2"> [2]</a></sup>
+					<li>Second prototipe and injection provided by Coeca<sup><a href="#cite_note_3"> [3]</a></sup> and Tecnasa<sup><a href="#cite_note_4"> [4]</a></sup>
+					<li>Third prototype and injection provided by Plastic Oceans<sup><a href="#cite_note_5"> [5]</a></sup>, Coeca and Tecnasa
 				</ul>
 
 				<p>Libremask design consists of a mask made by hot-press or mould
@@ -80,7 +93,7 @@
 				<p>
 					It is based on the “ Resusable Elastomeric
 					Respirator “proposed by Boston Children’s Hospital and Harvard
-					Medical School.<sup>[6]</sup>
+					Medical School.<sup><a href="#cite_note_6"> [6]</a></sup>
 				</p>
 
 				<p>
@@ -91,11 +104,11 @@
 				</p>
 				<h2>Aerosol testing</h2>
 				<p>
-					Following the recommendations from the Spanish National Research Council (CSIC) <sup>[7]</sup>, in the
+					Following the recommendations from the Spanish National Research Council (CSIC) <sup><a href="#cite_note_7"> [7]</a></sup>, in the
 					pandemic context,
 					we replicated the experimental setup thanks to the Interuniversity Institute for Earth System Research in
-					Andalusia<sup>[8]</sup>,
-					at the University of Granada<sup>[9]</sup>, to measure filtering capabilities against the most penetrating
+					Andalusia<sup><a href="#cite_note_8"> [8]</a></sup>,
+					at the University of Granada<sup><a href="#cite_note_9"> [9]</a></sup>, to measure filtering capabilities against the most penetrating
 					aerosol size, 300 nm.
 				</p>
 				<p>
@@ -167,7 +180,7 @@
 
 
 				<p>Complete results of this trials are available in "Material filtering efficiency under 300nm particles.
-					Aerosol exposition to SARS-COV-2".<sup>[10]</sup> </p>
+					Aerosol exposition to SARS-COV-2".<sup><a href="#cite_note_10"> [10]</a></sup> </p>
 
 				<img src="img/tests.PNG" alt="Test">
 
@@ -196,8 +209,8 @@
 
 				<p> The following files are available to manufacture the mask : </p>
 				<ul>
-					<li> Step file of V2 mask.<sup>[11]</sup>
-					<li> Soft tooling step for 3D print a mould.<sup>[12]</sup>
+					<li> Step file of V2 mask.<sup><a href="#cite_note_11"> [11]</a></sup>
+					<li> Soft tooling step for 3D print a mould.<sup><a href="#cite_note_12"> [12]</a></sup>
 				</ul>
 
 				<p> 
@@ -218,7 +231,7 @@
 				</figure>
 
 				<h4>HME breathing filter</h4>
-				<p> LibreMask uses a standard HME breathing filter Inter-Guard™, from Intersurgical<sup>[13]</sup> . The result of
+				<p> LibreMask uses a standard HME breathing filter Inter-Guard™, from Intersurgical<sup><a href="#cite_note_13"> [13]</a></sup> . The result of
 					our tests are
 					based on this HME filter, the decision
 					to use this HME filter came as the availability of the product in Spain. Product datasheet claims a 99.99%
@@ -378,25 +391,22 @@
 				<h2>References</h2>
 
 				<ol>
-					<li>Coronavirus Makers Movement webpage<a href="https://coronavirusmakers.org">[Link]</a> </li>
-					<li>Eyser Hidraulica webpage<a href="http://eyserhidraulica.com/">[Link]</a> </li>
-					<li>Coeca webpage <a href="http://coeca.com/">[Link]</a> </li>
-					<li>Tecnasa webpage<a href="http://tecnasa.es/">[Link]</a> </li>
-					<li>Plastic Oceans webpage<a href="https://plasticoceans.org/">[Link]</a> </li>
-
-					<li>Boston Children’s Hospital. COVID-19: Our response to the N95 shortage<a href="http://www.childrenshospital.org/research/departments-divisions-programs/departments/surgery/surgical-innovation-fellowship">[Link]</a> </li>
-					<li>Minguillón et al. Emisión y exposición a SARS-CoV-2 y opciones de filtración, Instituto de Diagnóstico Ambiental y Estudios del Agua (IDAEA), CSIC, v3, 15.04.2020  <a href="https://www.csic.es/sites/default/files/informe_caracteristicas_sars-cov-2_y_opciones_filtracion_idaea-csic_15_abril.pdf">[Link]</a></li>
-					<li>Andalusian Inter-University Institute for Earth System Research (IISTA-CEAMA) webpage <a href="http://www.iista.es/">[Link]</a></li>
-					<li>University of Granada webpage <a href="http://www.ugr.es/">[Link]</a></li>
-					<li> Instituto Interuniversitario de Investigación del Sistema Tierra en Andalucía, Universidad de
+					<li id="cite_note_1">Coronavirus Makers Movement webpage<a href="https://coronavirusmakers.org">[Link]</a> </li>
+					<li id="cite_note_2">Eyser Hidraulica webpage<a href="http://eyserhidraulica.com/">[Link]</a> </li>
+					<li id="cite_note_3">Coeca webpage <a href="http://coeca.com/">[Link]</a> </li>
+					<li id="cite_note_4">Tecnasa webpage<a href="http://tecnasa.es/">[Link]</a> </li>
+					<li id="cite_note_5">Plastic Oceans webpage<a href="https://plasticoceans.org/">[Link]</a> </li>
+					<li id="cite_note_6">Boston Children’s Hospital. COVID-19: Our response to the N95 shortage<a href="http://www.childrenshospital.org/research/departments-divisions-programs/departments/surgery/surgical-innovation-fellowship">[Link]</a> </li>
+					<li id="cite_note_7">Minguillón et al. Emisión y exposición a SARS-CoV-2 y opciones de filtración, Instituto de Diagnóstico Ambiental y Estudios del Agua (IDAEA), CSIC, v3, 15.04.2020  <a href="https://www.csic.es/sites/default/files/informe_caracteristicas_sars-cov-2_y_opciones_filtracion_idaea-csic_15_abril.pdf">[Link]</a></li>
+					<li id="cite_note_8">Andalusian Inter-University Institute for Earth System Research (IISTA-CEAMA) webpage <a href="http://www.iista.es/">[Link]</a></li>
+					<li id="cite_note_9">University of Granada webpage <a href="http://www.ugr.es/">[Link]</a></li>
+					<li id="cite_note_10"> Instituto Interuniversitario de Investigación del Sistema Tierra en Andalucía, Universidad de
 					Granada. Eficiencia de filtrado de distintos materiales ante partículas de 300
 					nm. Exposición a aerosoles en SARS-COV-2.
 						<a href="https://atmosphere.ugr.es/media/grupos/RNM119/noticias/Filtros_UGR_sin_FIN_20200426.pdf">[Link]</a></li>
-					<li>LibreMask final step file <a href="source/ICU-covidmask_V2_19052020.7z">[Link]</a></li>
-					<li>LibreMask tooling step file  <a href="source/ICU-covidmask_V2_mould_495-00-00_IMP_3D_280520.7z">[Link]</a></li>
-					<li>Intersurgical. Inter-Guard™ filter information  <a href="https://www.intersurgical.com/products/airway-management/interguard-range-sterile">[Link]</a></li>
-					
-					<li>Intersurgical. Inter-Guard™ filter information  <a href="https://www.intersurgical.com/products/airway-management/interguard-range-sterile">[Link]</a></li>
+					<li id="cite_note_11">LibreMask final step file <a href="source/ICU-covidmask_V2_19052020.7z">[Link]</a></li>
+					<li id="cite_note_12">LibreMask tooling step file  <a href="source/ICU-covidmask_V2_mould_495-00-00_IMP_3D_280520.7z">[Link]</a></li>
+					<li id="cite_note_13">Intersurgical. Inter-Guard™ filter information  <a href="https://www.intersurgical.com/products/airway-management/interguard-range-sterile">[Link]</a></li>
 
 				</ol>
 			</div>
