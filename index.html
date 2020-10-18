@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="data:image/png;base64,">
+	<title>ICU grade LibreMask</title>
+	<style>
+		@media (prefers-color-scheme: dark) {
+			body {
+				color: #fff;
+				background: #000
+			}
+
+			a:link {
+				color: #9cf
+			}
+
+			a:hover,
+			a:visited:hover {
+				color: #cef
+			}
+
+			a:visited {
+				color: #c9f
+			}
+		}
+
+		@keyframes highlight {
+			from {
+				background-color: red;
+			}
+
+			to {
+				background-color: yellow;
+			}
+		}
+
+		li:target {
+			background-color: yellow;
+			animation: highlight 1s ease;
+		}
+
+		li:target::before {
+			content: "►";
+			color: limegreen;
+		}
+
+		h3 {
+			line-height: 1.2;
+		}
+
+		figcaption {
+			.figure-caption
+		}
+
+		img#team {
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
+	</style>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+	<div class="container border mt-5 py-5">
+		<div class="row">
+			<div class="col px-5">
+				<header>
+					<h1>ICU-grade LibreMask</h1>
+					<aside>An open source aerosol filtering mask with filtering efficiency greater than N95/FFP2,
+						using standard breathing filters used in ventilators and available in hospitals <sup> <a
+								href="#cite_note_1"> [1]</a></sup>. LibreMask is inteded to be used by health care
+						workers in high-risk environments. </aside>
+				</header>
+
+				</ul>
+				<h3 class="mt-3" id="grey-text">What is LibreMask?</h3>
+
+				<p>
+					LibreMask is intended to be an ICU grade mask that uses breathing filters, HMEs and HMEFs filters in
+					order to achieve a
+					filtering efficiency superior to N95 or FFP2 masks.
+				</p>
+
+				<figure class="text-center">
+					<img src="img/Libremask.jpg" alt="Italian Trulli">
+					<figcaption class="figure-caption">LibreMask current version with breathing filter</figcaption>
+				</figure>
+				<p>
+					LibreMask has been developed by a group of Spanish researchers and citizens,
+					with the help of a number of companies joint under the Coronavirus Makers <sup> <a
+							href="#cite_note_2"> [2]</a></sup> movement.
+				</p>
+
+				<ul>
+					<li>First prototype hot press molding provided by Eyser Hydraulica<sup><a href="#cite_note_2">
+								[3]</a></sup>.
+					<li>Second prototype and hot press molding provided by Coeca<sup><a href="#cite_note_4">
+								[4]</a></sup> and Tecnasa<sup><a href="#cite_note_5"> [5]</a></sup>.
+					<li>Third prototype and hot press molding provided by Coeca and Tecnasa, and funded by Plastic
+						Oceans<sup><a href="#cite_note_6"> [6]</a></sup>.
+				</ul>
+
+				<p>Libremask design consists of a mask made by hot press molding or mould
+					injection with silicone or santoprene, removing the caveats of 3D printed materials,
+					and a standard breathing filter, available in hospitals.
+					These filters offer filtering efficiencies greater than N95/FFP2 masks, shielding the
+					most penetrating aerosol size - 300nm - in comparison to surgical masks that offer shielding to
+					micron-sized
+					aerosol.
+					These filters even outperform conventional N95/FFP2 masks as reported by the manufacturers<sup> <a
+							href="#cite_note_1"> [1]</a></sup>,
+					and by conventional aerosol filtration tests described below.
+				</p>
+				<p>
+					It is based on the “Resusable Elastomeric
+					Respirator“ developed by Boston Children’s Hospital and Harvard
+					Medical School.<sup><a href="#cite_note_7"> [7]</a></sup>
+				</p>
+
+				<p>
+					You can copy, modify and reuse all this material in part or totality as
+					long as the resulting product is maintained with
+					the same open hardware license.
+					The mask is not certified, use it at your own responsibility.
+				</p>
+
+				<div class="container">
+					<div class="row">
+						<div class="col-lg">
+							<div class="card">
+								<div class="card-body">
+									<h5 class="card-title">Contents</h5>
+									<ul>
+										<li> <a href="#aerosolTesting">Aerosol Testing</a> </li>
+										<li> <a href="#howTo"> How to replicate it </a></li>
+										<li> <a href="#operatingInstructions"> Operating instructions </a></li>
+										<li> <a href="#maintenanceInstructions"> Maintenance instructions </a></li>
+										<li> <a href="#prototypes"> Prototypes and development </a></li>
+										<li> <a href="#team"> Team </a></li>
+										<li> <a href="#sponsors"> Sponsors </a></li>
+										<li> <a href="#developerCommunities"> Developer communities </a></li>
+										<li> <a href="#press"> Contact </a></li>
+										<li> <a href="#references"> References </a></li>
+									</ul>
+								</div>
+
+							</div>
+						</div>
+						<div class="col-lg"></div>
+						<div class="col-lg"></div>
+					</div>
+				</div>
+
+				<h2 class="mt-3" id="aerosolTesting">Aerosol testing</h2>
+				<p>
+					Following the recommendations from the Spanish National Research Council (CSIC) <sup><a
+							href="#cite_note_8"> [8]</a></sup>, in the
+					pandemic context,
+					we replicated the experimental setup thanks to the Interuniversity Institute for Earth System
+					Research in
+					Andalusia<sup><a href="#cite_note_9"> [9]</a></sup>,
+					at the University of Granada, to measure filtering capabilities against the most penetrating
+					aerosol size, 300 nm.
+				</p>
+				<p>
+					Generation of NaCl aerosol and size selection with an electrostatic column, at 300 nm-size.
+					Aerosols are counted before and after the filter with two particle counters at the same time, at 1.5
+					liters
+					per minute.
+				</p>
+				<figure class="text-center">
+					<img src="img/clean_room_testing.jpg" alt="Italian Trulli">
+					<figcaption class="figure-caption">LibreMask aerosol leakage tests in clean room with laser
+						illumination and high speed camera recording, in IAVANTE (Junta de Andalucía).
+						LibreMask offered better performance than FFP3 masks with exhalation valve</figcaption>
+				</figure>
+
+				<table class="table table-striped table-bordered">
+					<tr>
+						<th>Component under test</th>
+						<th>Filtering efficiency</th>
+					</tr>
+					<tr>
+						<td>FFP3 mask</td>
+						<td>(99.999985±0.000004) %</td>
+
+					</tr>
+					<tr>
+						<td>Breathing filter </td>
+						<td>(99.99909±0.00004) %</td>
+
+
+					</tr>
+					<tr>
+						<td>Breathing filter used for 5h30m with 30m of intense physical activity</td>
+						<td>(99.666±0.006) %</td>
+					</tr>
+					<tr>
+						<td>Surgical mask</td>
+						<td>(75.9±0.8) %</td>
+
+					</tr>
+				</table>
+
+
+				<figcaption class="figure-caption mb-5">Complete results of this trials are available in "Material
+					filtering efficiency under 300nm particles.
+					Aerosol exposition to SARS-COV-2".<sup><a href="#cite_note_10"> [10]</a></sup> </figcaption>
+
+				<h2 class="mt-3" id="howTo">How to replicate it</h2>
+
+				<p>LibreMask is libre open source hardware. You are allowed to copy, modify and study the manufacturing
+					files.
+					Moreover, you are allowed to use the manufacturing files to create your own LibreMask </p>
+
+				<p>
+					While LibreMask has been tested as described above, it is not fully certified
+					and we cannot warrant that it will protect you against coronavirus, or other airborne diseases.</p>
+				<p>
+				<p>
+					Hereby, use it at your own reponsibility. Any person or company taking over this project should test
+					them to fully certify its filtering efficiency before donating or selling them.
+				</p>
+
+				<p>Libremask is composed of:</p>
+				<ul>
+					<li> A silicone/santoprene hot pressed/injection molded mask
+					<li> A breathing filter
+					<li> Two elastic straps
+				</ul>
+
+				<h4>Manufacturing files</h4>
+
+				<p> The following files are available to manufacture the mask : </p>
+				<ul>
+					<li> Step and stl file of current version of the mask.<sup><a href="#cite_note_11">[11,12]</a></sup>
+					<li> Soft tooling step file for 3D printing a mould.<sup><a href="#cite_note_12"> [13]</a></sup>
+				</ul>
+
+				<p>
+					Libremask is hot press/injection molded, avoiding the concerns on the porosity and mechanical
+					properties of conventional 3D printed masks.
+				</p>
+				<p>
+					Nevertheless, fabricating the mould by 3D printing and injecting silicone also avoids 3D printing
+					problems
+					thanks to the wettability between the liquid silicone and the 3D printed mould.
+				</p>
+				<figure class="text-center">
+					<img src="img/3dprintedinjection.JPG" alt="3D injection">
+					<figcaption class="figure-caption">3D printed mould and liquid silicone casting</figcaption>
+
+					<img src="img/3dinjection.JPG" class="mt-2" alt="3D printed injection">
+					<figcaption class="figure-caption">Liquid silicone casted mould of a 3D printed mask and silicone
+						casting with the same silicone</figcaption>
+				</figure>
+
+				<h4>Breathing filter</h4>
+				<p> LibreMask uses a standard breathing filter<sup><a href="#cite_note_1"> [1]</a></sup>.
+					The result of our tests are based on Inter-Guard™ breathing filters, from Intersurgical, although
+					any other certified breathing
+					filter will perform the same as they are standardized both in dimensions of the connection and
+					filtering capabilities.
+					The decision to use this kind of filter came as the availability of this product in Spain was not
+					compromised during the first
+					pandemic peak. Product datasheet claims a 99.99% filtering efficiency, which is consistent with the
+					result of the trials performed
+					in Universty of Granada.
+				</p>
+				<figure class="text-center">
+					<img src="img/Interguard_filterJPG.JPG" alt="Interguard filter information by Intersurgical">
+					<figcaption class="figure-caption">Interguard filter information by Intersurgical</figcaption>
+				</figure>
+
+				<h4> Elastic strips</h4>
+				<p>
+					You can source locally the elastic strips. This is intended to be a consumable that can be replaced
+					as frequently as needed. They should firmly press
+					the mask against the face of the wearer, without leaving any space that could result in air-leakage.
+				</p>
+				<h2 class="mt-3" id="operatingInstructions">Operating instructions</h2>
+
+				<p>Assuming the mask is sterilized as described below,
+					a breathing filter needs to be press-fit installed on the mask,
+					and the strips need to be checked and replaced by the strip of your convenience if they show signs
+					of wear.
+					Ensure it is air-tight on your face by blocking the filter with your hand and breathing gently,
+					the mask should resist both gentle inhalations and exhalations.
+				</p>
+
+				<figure class="text-center">
+					<img src="img/operation.JPG" alt="Operating instructions">
+					<figcaption class="figure-caption">Mask operation</figcaption>
+				</figure>
+
+
+				<h2 class="mt-3" id="maintenanceInstructions">Maintenance instructions</h2>
+
+				<p>Given the results of filtering capability over time of the filters reported in the table above, we
+					envisage that
+					one breathing filter is used per working shift. After the working shift, the filter should be
+					trashed and the material
+					of the mask enables its sterilization by any conventional method, ranging from autoclave to
+					immersion in diluted bleach,
+					or wiped with alcohol.
+				</p>
+
+
+				<h2 class="mt-3" id="prototypes">Prototypes and development</h2>
+				<p>
+					Several trials have been performed prior to achieving the current LibreMask prototype. As described
+					above,
+					the final result is a hot press molded food grade silicone mask. It is equipped with a breathing
+					filter, providing filtering efficiencies above N95/FFP2 masks.
+				</p>
+
+				<p>
+					During development 3D printing was used for prototyping. There are concerns about using 3D printing
+					for the final mask as it might be porous and not reliable from one mask to the next.
+					For this reason the final mask needs to be hot press or injection molded with santoprene or
+					silicone, or any other food grade suitable elastomer.
+				</p>
+
+
+
+				<figure class="text-center">
+					<img src="img/last_prototipe.JPG" alt="Final prototype">
+					<figcaption class="figure-caption">Current version of LibreMask with detail of the steel mould and
+						hot press molded silicone mask</figcaption>
+				</figure>
+
+				<p>
+					In each stage,
+					the masks were distributed to health staff in hospitals accross Spain to get direct feedback, and to
+					improve it
+					with their suggestions the mask, up to the current prototype.
+				</p>
+
+
+				<figure class="text-center">
+					<img src="img/first_proto.JPG" alt="First prototype">
+					<figcaption class="figure-caption">LibreMask first prototype being tested by health care workers
+					</figcaption>
+					<img class="mt-4" src="img/2nd_prototype_hospital_tests.png" alt="Second prototype">
+					<figcaption class="figure-caption mb-4">LibreMask second prototype being tested by health care
+						workers</figcaption>
+					<img src="img/development_of_3rd_proto.JPG" alt="Third prototype">
+					<figcaption class="figure-caption">Development of the third prototype with input from the health
+						care workers</figcaption>
+				</figure>
+
+				<h2 class="mt-3" id="Ack">Acknowledgements</h2>
+				<p>
+					The results of this project are due to a huge citizen effort and it would be impossible to
+					acknowledge every single person that contributed.
+					Dr Ramsés Marrero, Dr Vicente Pastrana, Dr Julia Herrera, David, Da, Pedro, Carmen, and many other health care workers
+					that helped us to realise what they need
+					in a very hostile environment as it is an ICU or ER in a hospital. Rubén that helped us with the
+					technicalities of filters. Javier Montero and
+					Armando Romanos and all the staff in IAVANTE (Junta de Andalucía) which offered us their clean room
+					and equipment to test the masks, and sent
+					them to hospitals to be tested. Prof. Lucas Alados and all the team in the University of Granada
+					that enabled us to compare the efficiency of
+					the breathing filters and FFP3 (N99) masks against 300 nm aerosols. All the volunteers in
+					coronavirusmakers.org that managed to move 1000 km the
+					masks in the middle of a holiday with the most severe mobility restrictions during the pandemics.
+					And the football team that sponsored such
+					expensive action, the Mérida Asociación Deportiva. The rail-workers from RENFE that carried the
+					masks in the trains to distribute them across Spain.
+					The policemen that distributed the masks to hospitals to be tested during the most severe mobility
+					restrictions. Rosa from frenalacurva.net, Antonio
+					Novo from clusters.es, and all the colleagues from coronavirusmakers.org, that helped to give
+					visibility to this project. And we cannot stress more
+					the role that people like Ioseba Monje and his team, Miguel Carrasco, or Mike Bilodeau played, by
+					financing and producing the masks, but overall, by
+					making sure they reached the hospitals to be tested by the people that needed them the most. This
+					last sentence will serve to the hundreds of persons
+					that helped in one or another way, to make this project what it is, something to be proud of.
+				</p>
+
+				<h2 class="my-4" id="team"> Team </h2>
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<div class="card" style="width: 18rem;">
+								<img class="img-fluid" src="people/miguelAngel.jpg">
+								<div class="card-body">
+									<h5 class="card-title">Miguel Ángel Fernández Rodríguez</h5>
+									<p class="card-text">
+										Coordinator and prototype manufacturing.
+									</p>
+									<a href="http://www.researcherid.com/rid/J-2923-2015"
+									class="btn btn-primary">Researcher profile</a>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="card h-25" style="width: 18rem;">
+								<img class="img-fluid" src="people/Manu Correa.jpg">
+								<div class="card-body">
+									<h5 class="card-title">Manuel Correa Gómez</h5>
+									<p class="card-text">
+										Design and testing V1 mask, and web development.
+									</p>
+									<a href="https://www.linkedin.com/in/manuel-correa-gomez/"
+										class="btn btn-primary">LinkedIn</a>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="card" style="width: 18rem;">
+								<img class="img-fluid" src="people/Fernando Alba.jpg">
+								<div class="card-body">
+									<h5 class="card-title">Fernando Alba-Elías</h5>
+									<p class="card-text">
+										Design and testing of prototypes.
+									</p>
+									<a href="https://investigacion.unirioja.es/investigadores/249/detalle"
+										class="btn btn-primary">Researcher profile</a>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="card h-25" style="width: 18rem;">
+								<img class="img-fluid" src="people/Jon.jpg">
+								<div class="card-body">
+									<h5 class="card-title">Jon A. Amorrortu Fernández</h5>
+									<p class="card-text">Design and testing of prototypes.</p>
+									<a href="mailto:jamorrortu@gmail.com" class="btn btn-primary">Mail</a>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="card h-25" style="width: 18rem;">
+								<img class="img-fluid" src="people/Luis_Salgado.jpg">
+								<div class="card-body">
+									<h5 class="card-title">Luis Salgado</h5>
+									<p class="card-text">
+										Logistics, documentation and web development.
+									</p>
+									<a href="https://www.linkedin.com/in/lbsalgado"
+										class="btn btn-primary">LinkedIn</a>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="card h-25" style="width: 18rem;">
+								<img class="img-fluid" src="people/mike.jpg">
+								<div class="card-body">
+									<h5 class="card-title">Mike Bilodeau</h5>
+									<p class="card-text">
+										Fundraiser for the current version steel mould.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="card h-25" style="width: 18rem;">
+								<img class="img-fluid" src="people/Miguel Angel Casanova.png">
+								<div class="card-body">
+									<h5 class="card-title">Miguel Ángel Casanova</h5>
+									<p class="card-text">
+										Documentation.
+									</p>
+									<a href="https://www.linkedin.com/in/miguelangelcasanovagonzalez/"
+										class="btn btn-primary">LinkedIn</a>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="card h-25" style="width: 18rem;">
+								<img class="img-fluid" src="people/santiagoAndreu.jpg">
+								<div class="card-body">
+									<h5 class="card-title">Santiago Andreu Carmona</h5>
+									<p class="card-text">
+										Documentation.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="card h-25" style="width: 18rem;">
+								<img class="img-fluid" src="people/cesarGarcia.jpg">
+								<div class="card-body">
+									<h5 class="card-title">Cesar García</h5>
+									<p class="card-text">
+										Legal support and documentation.
+									</p>
+									<a href="https://www.linkedin.com/in/cesargarciasaez/"
+									class="btn btn-primary">LinkedIn</a>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="card h-25" style="width: 18rem;">
+								<img class="img-fluid" src="people/Luis_Gonzalo.jpg">
+								<div class="card-body">
+									<h5 class="card-title">Luis Gonzalo</h5>
+									<p class="card-text">
+										Website and documentation.
+									</p>
+									<a href="https://t.me/makingcosillas" class="btn btn-primary">Telegram</a>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="card h-25" style="width: 18rem;">
+								<img class="img-fluid" src="people/Ramses.jpg">
+								<div class="card-body">
+									<h5 class="card-title">Ramsés Marrero García </h5>
+									<p class="card-text">
+										Documentation.
+									</p>
+									<a href="https://www.linkedin.com/in/ramses-marrero-garc%C3%ADa-a069281a6/"
+									class="btn btn-primary">LinkedIn</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<h2 class="mt-3" id="sponsors"> Sponsors </h2>
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<figure>
+								<img src="logos/logotecnasa.png" alt="Tecnasa">
+								<figcaption class="figure-caption"><a href="https://www.tecnologias-aerospaciales.com/">Tecnasa</a></figcaption>
+							</figure>
+						</div>
+						<div class="col">
+							<figure>
+								<img src="logos/Plastic-Oceans_Logo_sm.png" alt="Plastic Oceans">
+								<figcaption class="figure-caption"><p></p><a href="https://plasticoceans.org/">Plastic Oceans</a></figcaption>
+							</figure>
+						</div>
+						<div class="col">
+							<figure>
+								<img src="logos/logocoeca.png" alt="Coeca">
+								<figcaption class="figure-caption"><a href="https://www.coeca.com/">Coeca</a></figcaption>
+							</figure>
+						</div>
+						<div class="col">
+							<figure>
+								<img src="logos/Eyser.png" alt="Eyser">
+								<figcaption class="figure-caption"><a href="http://eyserhidraulica.com/">Eyser Hidraulica</a></figcaption>
+							</figure>
+						</div>
+					</div>
+
+					<h2 class="mt-3" id="developerCommunities"> Developer communities</h2>
+
+					<figure class="text-center row align-items-end">
+						<div class="col">
+							<img  src="logos/logo CVM4.JPG" alt="Coronavirus Makers">
+							<figcaption class="figure-caption"><p></p><a href="https://www.coronavirusmakers.org/">CoronaVirus Makers</a></figcaption>
+						</div>
+						<div class="col align-items-center">
+							<img src="logos/SevillaMakerSociety.png" alt="Sevilla Maker Society">
+							<figcaption class="figure-caption"><p></p><a href="https://www.sevillamakers.org/">Sevilla Maker Society</a></figcaption>
+						</div>
+						<div class="col">
+							<img class="w-50 mt-2" src="logos/LogoBilbaoMakers.svg" alt="Bilbao Makers">
+							<figcaption class="figure-caption"><p></p><a href="https://bilbaomakers.org/">Bilbao Makers</a></figcaption>
+						</div>
+					</figure>
+
+
+					<h2 class="mt-3" id="press">Contact</h2>
+
+					<p> For further information contact
+						<a href="mailto:mafernandez@ugr.es">Miguel Ángel Fernández</a>
+					</p>
+
+					<h2 class="mt-3" id="references">References</h2>
+
+					<ol>
+						<li id="cite_note_1">Intersurgical. Inter-Guard™ filter information <a
+								href="https://www.intersurgical.com/products/airway-management/interguard-range-sterile#1344007S">[Link]</a>
+						</li>
+						<li id="cite_note_2">Coronavirus Makers Movement webpage<a
+								href="https://coronavirusmakers.org">[Link]</a> </li>
+						<li id="cite_note_3">Eyser Hidraulica webpage<a href="http://eyserhidraulica.com/">[Link]</a>
+						</li>
+						<li id="cite_note_4">Coeca webpage <a href="http://coeca.com/">[Link]</a> </li>
+						<li id="cite_note_5">Tecnasa webpage<a href="http://tecnasa.es/">[Link]</a> </li>
+						<li id="cite_note_6">Plastic Oceans webpage<a href="https://plasticoceans.org/">[Link]</a> </li>
+						<li id="cite_note_7">Boston Children’s Hospital. COVID-19: Our response to the N95 shortage<a
+								href="http://www.childrenshospital.org/research/departments-divisions-programs/departments/surgery/surgical-innovation-fellowship">[Link]</a>
+						</li>
+						<li id="cite_note_8">Minguillón et al. Emisión y exposición a SARS-CoV-2 y opciones de
+							filtración, Instituto de Diagnóstico Ambiental y Estudios del Agua (IDAEA), CSIC, v3,
+							15.04.2020 <a
+								href="https://www.csic.es/sites/default/files/informe_caracteristicas_sars-cov-2_y_opciones_filtracion_idaea-csic_15_abril.pdf">[Link]</a>
+						</li>
+						<li id="cite_note_9">Andalusian Inter-University Institute for Earth System Research
+							(IISTA-CEAMA) webpage <a href="http://www.iista.es/">[Link]</a></li>
+						<li id="cite_note_10"> Instituto Interuniversitario de Investigación del Sistema Tierra en
+							Andalucía, Universidad de
+							Granada. Eficiencia de filtrado de distintos materiales ante partículas de 300
+							nm. Exposición a aerosoles en SARS-COV-2.
+							<a
+								href="https://atmosphere.ugr.es/media/grupos/RNM119/noticias/Filtros_UGR_sin_FIN_20200426.pdf">[Link]</a>
+						</li>
+						<li id="cite_note_11">LibreMask final step file <a
+								href="source/ICU-covidmask_V2_19052020.7z">[Link]</a></li>
+						<li id="cite_note_11">LibreMask final stl file <a href="source/ICU-mask_V2.7z">[Link]</a></li>
+						<li id="cite_note_12">LibreMask tooling step file <a
+								href="source/ICU-covidmask_V2_mould_495-00-00_IMP_3D_280520.7z">[Link]</a></li>
+
+					</ol>
+				</div>
+			</div>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+			integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+			crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+			integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+			crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+			integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+			crossorigin="anonymous"></script>
+</body>
+
+</html>
